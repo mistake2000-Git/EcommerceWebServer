@@ -13,7 +13,7 @@ public class Category {
     @Column(name ="category_name")
     private @NotBlank String categoryName;
     private @NotBlank String description;
-        @Column(name = "image_url")
+    @Column(name = "image_url")
     private @NotBlank String imageUrl;
     public Category(@NotBlank String categoryName,@NotBlank String description){
         this.categoryName = categoryName;
@@ -49,12 +49,12 @@ public class Category {
         this.description = description;
     }
 
-    public String getImgageUrl() {
+    public String getImageUrl() {
         return imageUrl;
     }
 
-    public void setImgageUrl(String imgageUrl) {
-        this.imageUrl = imgageUrl;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class Category {
                 "id=" + id +
                 ", categoryName='" + categoryName + '\'' +
                 ", description='" + description + '\'' +
-                ", imgageUrl='" + imageUrl + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 

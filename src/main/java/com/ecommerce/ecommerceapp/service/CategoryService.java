@@ -35,7 +35,7 @@ public class CategoryService{
         Category category = categoryRepository.findById(categoryID).get();
         category.setCategoryName(newCategory.getCategoryName());
         category.setDescription(newCategory.getDescription());
-        category.setImgageUrl(newCategory.getImgageUrl());
+        category.setImageUrl(newCategory.getImageUrl());
         categoryRepository.save(category);
     }
     public void createCategory(Category category){

@@ -26,6 +26,7 @@ public class ProductDto {
         this.setPrice(product.getPrice());
         this.setDescription(product.getDescription());
         this.setImageUrl(product.getImageUrl());
+        this.setCategoryId(product.getId());
     }
 
     public Integer getId() {
