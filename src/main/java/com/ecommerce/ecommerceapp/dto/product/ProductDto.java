@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerceapp.dto;
+package com.ecommerce.ecommerceapp.dto.product;
 
 import com.ecommerce.ecommerceapp.model.Product;
 

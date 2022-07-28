@@ -1,6 +1,7 @@
 package com.ecommerce.ecommerceapp.service;
 
-import com.ecommerce.ecommerceapp.dto.ProductDto;
+import com.ecommerce.ecommerceapp.dto.product.ProductDto;
+import com.ecommerce.ecommerceapp.exceptions.ProductNotExistException;
 import com.ecommerce.ecommerceapp.model.Category;
 import com.ecommerce.ecommerceapp.model.Product;
 import com.ecommerce.ecommerceapp.repository.ProductRepository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ProductService {
@@ -24,6 +26,7 @@ public class ProductService {
     {
         Product product = new Product();
         product.setId(productDto.getId());
+        product.setName(productDto.getName());
         product.setDescription(productDto.getDescription());
         product.setImageUrl(productDto.getImageUrl());
         product.setPrice(productDto.getPrice());
@@ -45,6 +48,12 @@ public class ProductService {
         product.setId(productId);
         productRepository.save(product);
     }
-
+    public Product findProduct(int productId)throws ProductNotExistException {
+        Product product = productRepository.findProductById(productId);
+        if(!Objects.nonNull(product)){
+            throw new ProductNotExistException("Product does not exist");
+        }
+       return product;
+    }
 
 }

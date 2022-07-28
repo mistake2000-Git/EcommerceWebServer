@@ -1,15 +1,14 @@
 package com.ecommerce.ecommerceapp.service;
 
 import com.ecommerce.ecommerceapp.config.MessageStrings;
-import com.ecommerce.ecommerceapp.dto.User.SignInDto;
-import com.ecommerce.ecommerceapp.dto.User.SignInReponseDto;
-import com.ecommerce.ecommerceapp.dto.User.SignUpDto;
-import com.ecommerce.ecommerceapp.dto.User.SignUpResponseDto;
+import com.ecommerce.ecommerceapp.dto.user.SignInDto;
+import com.ecommerce.ecommerceapp.dto.user.SignInReponseDto;
+import com.ecommerce.ecommerceapp.dto.user.SignUpDto;
+import com.ecommerce.ecommerceapp.dto.user.SignUpResponseDto;
 import com.ecommerce.ecommerceapp.exceptions.AuthenticationFailException;
 import com.ecommerce.ecommerceapp.exceptions.CustomException;
 import com.ecommerce.ecommerceapp.model.AuthenticationToken;
 import com.ecommerce.ecommerceapp.model.User;
-import com.ecommerce.ecommerceapp.repository.TokenRepository;
 import com.ecommerce.ecommerceapp.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

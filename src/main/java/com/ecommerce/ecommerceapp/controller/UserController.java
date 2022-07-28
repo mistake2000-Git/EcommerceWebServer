@@ -1,12 +1,11 @@
 package com.ecommerce.ecommerceapp.controller;
 
-import com.ecommerce.ecommerceapp.dto.User.SignInDto;
-import com.ecommerce.ecommerceapp.dto.User.SignInReponseDto;
-import com.ecommerce.ecommerceapp.dto.User.SignUpDto;
-import com.ecommerce.ecommerceapp.dto.User.SignUpResponseDto;
+import com.ecommerce.ecommerceapp.dto.user.SignInDto;
+import com.ecommerce.ecommerceapp.dto.user.SignInReponseDto;
+import com.ecommerce.ecommerceapp.dto.user.SignUpDto;
+import com.ecommerce.ecommerceapp.dto.user.SignUpResponseDto;
 import com.ecommerce.ecommerceapp.exceptions.AuthenticationFailException;
 import com.ecommerce.ecommerceapp.exceptions.CustomException;
-import com.ecommerce.ecommerceapp.model.User;
 import com.ecommerce.ecommerceapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,7 +1,7 @@
 package com.ecommerce.ecommerceapp.controller;
 
 import com.ecommerce.ecommerceapp.common.ApiResponse;
-import com.ecommerce.ecommerceapp.dto.ProductDto;
+import com.ecommerce.ecommerceapp.dto.product.ProductDto;
 import com.ecommerce.ecommerceapp.model.Category;
 import com.ecommerce.ecommerceapp.service.CategoryService;
 import com.ecommerce.ecommerceapp.service.ProductService;
@@ -33,7 +33,7 @@ public class ProductController {
         }
         Category category = optionalCategory.get();
         productService.addProduct(productDto,category);
-        return new ResponseEntity<>(new ApiResponse(false,"Add product successfully"),HttpStatus.CREATED);
+        return new ResponseEntity<>(new ApiResponse(true,"Add product successfully"),HttpStatus.CREATED);
     }
 
     @GetMapping("/getAll")

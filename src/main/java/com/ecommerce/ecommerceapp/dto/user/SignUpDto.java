@@ -1,6 +1,4 @@
-package com.ecommerce.ecommerceapp.dto.User;
-
-import javax.persistence.Column;
+package com.ecommerce.ecommerceapp.dto.user;
 
 public class SignUpDto {
     private String firstName;

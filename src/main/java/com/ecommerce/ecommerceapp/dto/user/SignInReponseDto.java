@@ -1,4 +1,4 @@
-package com.ecommerce.ecommerceapp.dto.User;
+package com.ecommerce.ecommerceapp.dto.user;
 
 public class SignInReponseDto {
     private String status;
