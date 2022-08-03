@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,6 @@ public class Order {
 
     @OneToMany(mappedBy = "order",fetch = FetchType.LAZY)
     private List<OrderItem> orderItems;
-
     @ManyToOne()
     @JsonIgnore
     @JoinColumn(name = "user_id", referencedColumnName = "id")

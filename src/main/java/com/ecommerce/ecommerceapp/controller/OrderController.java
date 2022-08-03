@@ -5,6 +5,7 @@ import com.ecommerce.ecommerceapp.common.ApiResponse;
 import com.ecommerce.ecommerceapp.exceptions.AuthenticationFailException;
 import com.ecommerce.ecommerceapp.exceptions.CartItemDoesNotExistException;
 import com.ecommerce.ecommerceapp.model.Order;
+import com.ecommerce.ecommerceapp.model.OrderItem;
 import com.ecommerce.ecommerceapp.model.User;
 import com.ecommerce.ecommerceapp.service.AuthenticationService;
 import com.ecommerce.ecommerceapp.service.OrderService;
@@ -32,7 +33,7 @@ public class OrderController {
         return new ResponseEntity<>(new ApiResponse(true,"Order has been placed"), HttpStatus.CREATED);
     }
 
-    @GetMapping("/getAllOrderS")
+    @GetMapping("/getAllOrders")
     public ResponseEntity<List<Order>> listOrderOfUser(@RequestParam("token") String token) throws AuthenticationFailException{
         authenticationService.authenticate(token);
         User user = authenticationService.getTokenUser(token);

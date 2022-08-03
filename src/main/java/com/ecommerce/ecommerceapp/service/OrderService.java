@@ -120,7 +120,7 @@ public class OrderService {
     @GetMapping("/getUserOrders")
     public List<Order> listUserOrders(User user)
     {
-        return orderItemRepository.findAllByUserOrderByCreatedDateDesc(user);
+        return orderRepository.findAllByUserOrderByCreatedDateDesc(user);
     }
 
 }
